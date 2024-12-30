@@ -23,3 +23,10 @@ newgrp docker
 # gsettings set org.gnome.shell enabled-extensions 'elementary'
 # gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
 
+# For Games
+sudo pacman -S heroic-games-launcher-bin steam 
+
+# GPU drivers
+# sudo pacman -S vulkan-radeon #AMD GPUs
+# sudo pacman -S nvidia-utils #nvidia
+# sudo pacman -S vulkan-intel #intel
