@@ -30,3 +30,8 @@ sudo pacman -S heroic-games-launcher-bin steam
 # sudo pacman -S vulkan-radeon #AMD GPUs
 # sudo pacman -S nvidia-utils #nvidia
 # sudo pacman -S vulkan-intel #intel
+
+# Add required plugins
+asdf plugin-add golang
+asdf plugin-add nodejs
+
