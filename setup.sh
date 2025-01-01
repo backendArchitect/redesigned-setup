@@ -35,3 +35,17 @@ sudo pacman -S heroic-games-launcher-bin steam
 asdf plugin-add golang
 asdf plugin-add nodejs
 
+# Install k3s 
+curl -sfL https://get.k3s.io | sh -
+
+sudo systemctl status k3s
+sudo systemctl restart k3s
+# Grant necessary permissions
+sudo chmod -R 755 /etc/rancher/k3s
+sudo chown -R $(whoami):$(whoami) /etc/rancher/k3s
+# Ensure Proper kubeconfig
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+# Test kubectl
+kubectl get nodes
+# Check if API server is running
+netstat -tuln | grep 6443
