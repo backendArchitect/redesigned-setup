@@ -50,3 +50,17 @@ export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 kubectl get nodes
 # Check if API server is running
 netstat -tuln | grep 6443
+
+# For multi org setup tool
+go install github.com/gabrie30/ghorg@latest
+
+#Google Cloud
+curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
+tar -xf google-cloud-cli-linux-x86_64.tar.gz
+./google-cloud-sdk/install.sh
+#If want to login
+#gcloud auth login
+#gcloud config set project <project-name>
+#gcloud components update
+#gcloud container clusters list
+#gcloud container clusters get-credentials <name> --region <region-name>
