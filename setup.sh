@@ -64,3 +64,5 @@ tar -xf google-cloud-cli-linux-x86_64.tar.gz
 #gcloud components update
 #gcloud container clusters list
 #gcloud container clusters get-credentials <name> --region <region-name>
+
+#fingerprint setup docs https://community.frame.work/t/guide-solved-sudo-and-login-with-fingerprint-reader-under-kde-arch-linux/37009/14
