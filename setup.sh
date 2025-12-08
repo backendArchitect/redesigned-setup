@@ -77,3 +77,25 @@ tar -xf google-cloud-cli-linux-x86_64.tar.gz
 #gcloud container clusters get-credentials <name> --region <region-name>
 
 #fingerprint setup docs https://community.frame.work/t/guide-solved-sudo-and-login-with-fingerprint-reader-under-kde-arch-linux/37009/14
+
+#Add battery threshold service.
+sudo vim /etc/systemd/system/battery-charge-threshold.service
+```
+[Unit]
+  Description=Set battery charge thresholds
+  After=multi-user.target
+  StartLimitBurst=0
+  
+  [Service]
+  Type=oneshot
+  Restart=on-failure
+  ExecStart=/bin/bash -c 'echo 85 > /sys/class/power_supply/BAT0/charge_control_end_threshold'
+  ExecStart=/bin/bash -c 'echo 80 > /sys/class/power_supply/BAT0/charge_control_start_threshold'
+  
+  [Install]
+  WantedBy=multi-user.target
+```
+sudo systemctl enable battery-charge-threshold.service
+sudo systemctl start battery-charge-threshold.service
+sudo systemctl daemon-reload
+sudo systemctl status battery-charge-threshold.service
