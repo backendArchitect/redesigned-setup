@@ -10,7 +10,7 @@ sudo pacman -Syyu
 sudo pacman -Syu brave-bin kitty dbeaver slack-desktop visual-studio-code-bin go asdf-vm gtk3 gtk4 k9s go-tools git thunar bpytop \
   cpu-x ctop docker docker-buildx docker-compose dust flameshot freedownloadmanager git grep jq kubectl kubectx vim nmap peek rsync \
   systemd yay ssh-tools eza ffmpeg ffmpeg4.4 fzf lsof sbc tree which wget bat yum gnome-disk-utility postman-bin gnome-disk-utility \
-  gnome-system-monitor
+  gnome-system-monitor golangci-lint helm wine-stable openssl-1.0 openssl-1.1
 
 # Enable docker without sudo
 sudo groupadd docker
@@ -53,6 +53,17 @@ netstat -tuln | grep 6443
 
 # For multi org setup tool
 go install github.com/gabrie30/ghorg@latest
+go install github.com/bufbuild/buf/cmd/buf@v1.13.1
+go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@v2.13.0
+go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@v2.13.0
+go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28.1
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2.0
+go install github.com/sorcererxw/protoc-gen-go-grpc-mock@v1.1.0
+go install github.com/envoyproxy/protoc-gen-validate@v0.9.0
+go install github.com/srikrsna/protoc-gen-gotag@v1.0.2
+go install github.com/pressly/goose/v3/cmd/goose@latest
+git clone git@github.com:fluidtruck/fctl.git
+cd fctl && go install
 
 #Google Cloud
 curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
