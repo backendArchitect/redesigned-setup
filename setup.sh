@@ -10,7 +10,7 @@ sudo pacman -Syyu
 sudo pacman -Syu brave-bin kitty dbeaver slack-desktop visual-studio-code-bin go asdf-vm gtk3 gtk4 k9s go-tools git thunar bpytop \
   cpu-x ctop docker docker-buildx docker-compose dust flameshot freedownloadmanager git grep jq kubectl kubectx vim nmap peek rsync \
   systemd yay ssh-tools eza ffmpeg ffmpeg4.4 fzf lsof sbc tree which wget bat gnome-disk-utility postman-bin gnome-disk-utility \
-  gnome-system-monitor golangci-lint helm wine-stable openssl-1.0 openssl-1.1
+  gnome-system-monitor golangci-lint helm wine-stable openssl-1.1 power-profiles-daemon
 
 # Enable docker without sudo
 sudo groupadd docker
