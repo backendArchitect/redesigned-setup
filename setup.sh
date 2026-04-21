@@ -23,6 +23,8 @@ newgrp docker
 # gsettings set org.gnome.desktop.interface clock-show-date true
 # gsettings set org.gnome.shell enabled-extensions 'elementary'
 # gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+# kwriteconfig6 --file kwinrc --group Windows --key BorderlessMaximizedWindows false
+# qdbus6 org.kde.KWin /KWin reconfigure
 
 # For Games
 sudo pacman -S heroic-games-launcher-bin steam 
